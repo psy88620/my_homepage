@@ -1,68 +1,21 @@
 <!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f7f1">
-  <meta name="description" content="오늘의 학교 급식 메뉴를 확인하세요.">
-  <title>오늘의 급식 | 우리 학교</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Gowun+Dodum&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="page-shell">
-    <header class="topbar">
-      <a class="brand" href="./" aria-label="오늘의 급식 홈">
-        <span class="brand-mark" aria-hidden="true">밥</span>
-        <span>오늘의 급식<span class="brand-dot">.</span></span>
-      </a>
-      <span class="school-label"><span class="live-dot"></span> 우리 학교 식단</span>
-    </header>
-
-    <main>
-      <section class="hero" aria-labelledby="page-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="sparkle">✳</span> DAILY SCHOOL MENU</p>
-          <h1 id="page-title">오늘은 뭐가<br><span>나올까요?</span></h1>
-          <p class="hero-note">맛있는 점심으로 채우는 오늘의 에너지</p>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <span class="sun-shape"></span>
-          <span class="plate"><span class="plate-food">🍱</span></span>
-          <span class="art-spark spark-one">✦</span><span class="art-spark spark-two">✳</span>
-          <span class="art-leaf">〰</span>
-        </div>
-      </section>
-
-      <section class="menu-panel" aria-labelledby="menu-heading">
-        <div class="panel-top">
-          <div>
-            <p class="section-kicker">TODAY'S MENU</p>
-            <h2 id="menu-heading">오늘의 식단</h2>
-          </div>
-          <div class="date-control" aria-label="날짜 선택">
-            <button id="prev-day" class="icon-button" type="button" aria-label="전날 식단">‹</button>
-            <time id="today" aria-live="polite"></time>
-            <button id="next-day" class="icon-button" type="button" aria-label="다음 날 식단">›</button>
-          </div>
-        </div>
-        <div class="date-line"><span class="date-icon">▦</span><span id="date-label"></span><span class="today-badge" id="today-badge">TODAY</span></div>
-        <div id="result" class="meal-list" aria-live="polite" aria-busy="false">
-          <div class="loading-card"><span class="loader"></span><p>오늘의 메뉴를 불러오고 있어요</p></div>
-        </div>
-        <p class="panel-footnote"><span>✦</span> 메뉴 및 알레르기 정보는 학교 공지와 함께 확인해 주세요.</p>
-      </section>
-
-      <section class="bottom-note">
-        <span class="note-icon">🥄</span>
-        <p><strong>맛있게 먹고, 힘차게!</strong><br>오늘도 든든한 하루 보내세요.</p>
-        <span class="note-doodle" aria-hidden="true">♡</span>
-      </section>
-    </main>
-    <footer><span>우리 학교 급식 안내</span><span>좋은 하루, 맛있는 한 끼 <b>♥</b></span></footer>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f7f1">
+<meta name="description" content="우리 학교 급식, 시간표, 학사일정을 한눈에 확인하세요."><title>우리 학교 오늘</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Gowun+Dodum&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body><div class="page-shell">
+<header class="topbar"><a class="brand" href="./"><span class="brand-mark">오늘</span><span>우리 학교<span class="brand-dot">.</span></span></a><span class="school-label"><span class="live-dot"></span> SCHOOL LIFE DASHBOARD</span></header>
+<main>
+<section class="hero"><div class="hero-copy"><p class="eyebrow"><span class="sparkle">✳</span> SCHOOL LIFE, AT A GLANCE</p><h1>오늘의 학교생활,<br><span>한눈에 확인해요.</span></h1><p class="hero-note">시간표부터 급식, 학교 일정까지 한 페이지에</p></div><div class="hero-art" aria-hidden="true"><span class="sun-shape"></span><span class="plate"><span class="plate-food">📚</span></span><span class="art-spark spark-one">✦</span><span class="art-spark spark-two">✳</span><span class="art-leaf">〰</span></div></section>
+<section class="menu-panel" aria-labelledby="menu-heading"><div class="panel-top"><div><p class="section-kicker">YOUR DAY</p><h2 id="menu-heading">오늘 한눈에 보기</h2></div><div class="date-control"><button id="prev-day" class="icon-button" aria-label="전날">‹</button><time id="today"></time><button id="next-day" class="icon-button" aria-label="다음 날">›</button></div></div>
+<div class="date-line"><span class="date-icon">▦</span><span id="date-label"></span><span class="today-badge" id="today-badge">TODAY</span></div>
+<div class="dashboard-grid">
+<section class="widget" aria-labelledby="meal-heading"><div class="widget-heading"><span class="widget-icon meal-icon">🍱</span><div><p class="section-kicker">MEAL</p><h3 id="meal-heading">오늘의 급식</h3></div></div><div id="result" class="meal-list" aria-live="polite" aria-busy="false"><div class="loading-card"><span class="loader"></span><p>급식 정보를 불러오는 중</p></div></div><p class="panel-footnote">알레르기 정보는 학교 공지도 확인해 주세요.</p></section>
+<section class="widget" aria-labelledby="timetable-heading"><div class="widget-heading"><span class="widget-icon time-icon">📘</span><div><p class="section-kicker">TIMETABLE</p><h3 id="timetable-heading">오늘의 시간표</h3></div></div>
+<div class="class-select"><label>학년 <select id="grade"><option value="1">1학년</option><option value="2">2학년</option><option value="3">3학년</option></select></label><label>반 <select id="class"><option value="1">1반</option><option value="2">2반</option><option value="3">3반</option><option value="4">4반</option><option value="5">5반</option><option value="6">6반</option><option value="7">7반</option><option value="8">8반</option><option value="9">9반</option><option value="10">10반</option><option value="11">11반</option><option value="12">12반</option></select></label></div>
+<div id="timetable" class="list-widget" aria-live="polite"><div class="empty-card">시간표를 불러오는 중…</div></div></section>
+<section class="widget schedule-widget" aria-labelledby="schedule-heading"><div class="widget-heading"><span class="widget-icon schedule-icon">🗓️</span><div><p class="section-kicker">SCHOOL CALENDAR</p><h3 id="schedule-heading">다가오는 학사일정</h3></div></div><div id="schedule" class="list-widget" aria-live="polite"><div class="empty-card">학사일정을 불러오는 중…</div></div></section>
+</div></section>
+<section class="bottom-note"><span class="note-icon">🌱</span><p><strong>오늘도 좋은 하루!</strong><br>배움과 즐거움이 가득하길 바라요.</p><span class="note-doodle">♡</span></section>
+</main><footer><span>우리 학교 생활 안내</span><span>급식 · 시간표 · 학사일정</span></footer></div><script src="script.js"></script></body></html>
