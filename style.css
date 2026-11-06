@@ -22,3 +22,15 @@ main.weekly-mode>.hero,main.weekly-mode>.menu-panel,main.weekly-mode>.bottom-not
 /* Final layout: five equal weekday columns fill the available panel */
 #weekly-result.weekly-list{width:100%;grid-template-columns:repeat(5,minmax(0,1fr));overflow-x:hidden}
 @media(max-width:700px){#weekly-result.weekly-list{grid-template-columns:repeat(5,minmax(0,1fr));overflow-x:auto}}
+
+/* Mobile weekly menu: readable swipeable weekday cards */
+@media(max-width:620px){
+  #weekly-result.weekly-list{grid-template-columns:repeat(5,minmax(250px,82vw));gap:10px;padding:14px 2px 12px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain}
+  #weekly-result .week-day{min-height:210px;padding:16px 15px;gap:13px}
+  #weekly-result .week-date{font-size:13px}
+  #weekly-result .week-meal-title{font-size:12px}
+  #weekly-result .week-menu{font-size:13px;line-height:1.75}
+  .weekly-view{padding-left:15px;padding-right:15px}
+  .weekly-top h2{font-size:23px}
+}
+@media(min-width:621px){#weekly-result.weekly-list{grid-template-columns:repeat(5,minmax(0,1fr));overflow-x:hidden}}
