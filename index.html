@@ -3,20 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>우리 학교 안내</title>
+  <meta name="theme-color" content="#f5f7f1">
+  <meta name="description" content="오늘의 학교 급식 메뉴를 확인하세요.">
+  <title>오늘의 급식 | 우리 학교</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Gowun+Dodum&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><h1>우리 학교 안내</h1><p>급식과 학교 소식을 확인해요.</p></header>
-  <main>
-    <section><h2>오늘의 날짜</h2><p id="today"></p></section>
-    <section><h2>학교 정보 API 실습</h2>
-      <p id="result">버튼을 눌러 예시 데이터를 불러오세요.</p>
-      <button id="load">불러오기</button>
-    </section>
-  </main>
-  <footer>실습용 홈페이지</footer>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="오늘의 급식 홈">
+        <span class="brand-mark" aria-hidden="true">밥</span>
+        <span>오늘의 급식<span class="brand-dot">.</span></span>
+      </a>
+      <span class="school-label"><span class="live-dot"></span> 우리 학교 식단</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="sparkle">✳</span> DAILY SCHOOL MENU</p>
+          <h1 id="page-title">오늘은 뭐가<br><span>나올까요?</span></h1>
+          <p class="hero-note">맛있는 점심으로 채우는 오늘의 에너지</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="sun-shape"></span>
+          <span class="plate"><span class="plate-food">🍱</span></span>
+          <span class="art-spark spark-one">✦</span><span class="art-spark spark-two">✳</span>
+          <span class="art-leaf">〰</span>
+        </div>
+      </section>
+
+      <section class="menu-panel" aria-labelledby="menu-heading">
+        <div class="panel-top">
+          <div>
+            <p class="section-kicker">TODAY'S MENU</p>
+            <h2 id="menu-heading">오늘의 식단</h2>
+          </div>
+          <div class="date-control" aria-label="날짜 선택">
+            <button id="prev-day" class="icon-button" type="button" aria-label="전날 식단">‹</button>
+            <time id="today" aria-live="polite"></time>
+            <button id="next-day" class="icon-button" type="button" aria-label="다음 날 식단">›</button>
+          </div>
+        </div>
+        <div class="date-line"><span class="date-icon">▦</span><span id="date-label"></span><span class="today-badge" id="today-badge">TODAY</span></div>
+        <div id="result" class="meal-list" aria-live="polite" aria-busy="false">
+          <div class="loading-card"><span class="loader"></span><p>오늘의 메뉴를 불러오고 있어요</p></div>
+        </div>
+        <p class="panel-footnote"><span>✦</span> 메뉴 및 알레르기 정보는 학교 공지와 함께 확인해 주세요.</p>
+      </section>
+
+      <section class="bottom-note">
+        <span class="note-icon">🥄</span>
+        <p><strong>맛있게 먹고, 힘차게!</strong><br>오늘도 든든한 하루 보내세요.</p>
+        <span class="note-doodle" aria-hidden="true">♡</span>
+      </section>
+    </main>
+    <footer><span>우리 학교 급식 안내</span><span>좋은 하루, 맛있는 한 끼 <b>♥</b></span></footer>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
-
