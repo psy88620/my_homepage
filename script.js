@@ -1,4 +1,4 @@
-const KEY = "여기에_API키";
+const KEY = "60ad4c7104024465892a3d2e2c3679d9";
 const ATPT="N10",SCHUL="8140262";
 const $=s=>document.querySelector(s),result=$("#result"),timeTable=$("#timetable"),schedule=$("#schedule");
 let selectedDate=new Date();
