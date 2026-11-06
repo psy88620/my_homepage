@@ -11,11 +11,18 @@
 <section class="menu-panel" aria-labelledby="menu-heading"><div class="panel-top"><div><p class="section-kicker">YOUR DAY</p><h2 id="menu-heading">오늘 한눈에 보기</h2></div><div class="date-control"><button id="prev-day" class="icon-button" aria-label="전날">‹</button><time id="today"></time><button id="next-day" class="icon-button" aria-label="다음 날">›</button></div></div>
 <div class="date-line"><span class="date-icon">▦</span><span id="date-label"></span><span class="today-badge" id="today-badge">TODAY</span></div>
 <div class="dashboard-grid">
-<section class="widget" aria-labelledby="meal-heading"><div class="widget-heading"><span class="widget-icon meal-icon">🍱</span><div><p class="section-kicker">MEAL</p><h3 id="meal-heading">오늘의 급식</h3></div></div><div id="result" class="meal-list" aria-live="polite" aria-busy="false"><div class="loading-card"><span class="loader"></span><p>급식 정보를 불러오는 중</p></div></div><p class="panel-footnote">알레르기 정보는 학교 공지도 확인해 주세요.</p></section>
+<section class="widget" aria-labelledby="meal-heading"><div class="widget-heading"><span class="widget-icon meal-icon">🍱</span><div><p class="section-kicker">MEAL</p><h3 id="meal-heading">오늘의 급식</h3></div><button id="open-week" class="week-open" type="button">주차별 급식 메뉴 보기 <span aria-hidden="true">→</span></button></div><div id="result" class="meal-list" aria-live="polite" aria-busy="false"><div class="loading-card"><span class="loader"></span><p>급식 정보를 불러오는 중</p></div></div><p class="panel-footnote">알레르기 정보는 학교 공지도 확인해 주세요.</p></section>
 <section class="widget" aria-labelledby="timetable-heading"><div class="widget-heading"><span class="widget-icon time-icon">📘</span><div><p class="section-kicker">TIMETABLE</p><h3 id="timetable-heading">오늘의 시간표</h3></div></div>
 <div class="class-select"><label>학년 <select id="grade"><option value="1">1학년</option><option value="2">2학년</option><option value="3">3학년</option></select></label><label>반 <select id="class"><option value="1">1반</option><option value="2">2반</option><option value="3">3반</option><option value="4">4반</option><option value="5">5반</option><option value="6">6반</option><option value="7">7반</option><option value="8">8반</option><option value="9">9반</option><option value="10">10반</option><option value="11">11반</option><option value="12">12반</option></select></label></div>
 <div id="timetable" class="list-widget" aria-live="polite"><div class="empty-card">시간표를 불러오는 중…</div></div></section>
 <section class="widget schedule-widget" aria-labelledby="schedule-heading"><div class="widget-heading"><span class="widget-icon schedule-icon">🗓️</span><div><p class="section-kicker">SCHOOL CALENDAR</p><h3 id="schedule-heading">다가오는 학사일정</h3></div></div><div id="schedule" class="list-widget" aria-live="polite"><div class="empty-card">학사일정을 불러오는 중…</div></div></section>
 </div></section>
+<section id="weekly-view" class="weekly-view" hidden aria-labelledby="weekly-title">
+  <div class="weekly-top"><button id="close-week" class="back-button" type="button"><span aria-hidden="true">←</span> 오늘 한눈에 보기</button><p class="section-kicker">WEEKLY MEAL PLAN</p><h2 id="weekly-title">주차별 급식 메뉴</h2><p class="weekly-subtitle">이번 주 식단을 한눈에 확인해요.</p>
+    <div class="week-nav"><button id="prev-week" class="icon-button" type="button" aria-label="지난 주">‹</button><span id="week-label"></span><button id="next-week" class="icon-button" type="button" aria-label="다음 주">›</button></div>
+  </div>
+  <div id="weekly-result" class="weekly-list" aria-live="polite"></div>
+  <p class="panel-footnote">메뉴 및 알레르기 정보는 학교 공지와 함께 확인해 주세요.</p>
+</section>
 <section class="bottom-note"><span class="note-icon">🌱</span><p><strong>오늘도 좋은 하루!</strong><br>배움과 즐거움이 가득하길 바라요.</p><span class="note-doodle">♡</span></section>
 </main><footer><span>우리 학교 생활 안내</span><span>급식 · 시간표 · 학사일정</span></footer></div><script src="script.js"></script></body></html>
