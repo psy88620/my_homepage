@@ -1,4 +1,4 @@
-const KEY = "60ad4c7104024465892a3d2e2c3679d9";
+
 const ATPT = "N10";        // 교육청 코드
 const SCHUL = "8140262";   // 학교 코드
 
