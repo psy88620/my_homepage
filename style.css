@@ -13,3 +13,6 @@ main.weekly-mode>.hero,main.weekly-mode>.menu-panel,main.weekly-mode>.bottom-not
 .week-menu{font-size:11px;line-height:1.65;overflow-wrap:anywhere}
 .weekly-list>.empty-card,.weekly-list>.error-card{grid-column:1/-1}
 @media(max-width:700px){.weekly-list{grid-template-columns:repeat(7,minmax(140px,1fr));scrollbar-width:thin}.week-day{min-height:170px;padding:13px}}
+
+.weekly-list{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:700px){.weekly-list{grid-template-columns:repeat(5,minmax(140px,1fr))}}
