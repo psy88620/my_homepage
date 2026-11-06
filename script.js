@@ -9,7 +9,7 @@ async function loadMeal() {
   const output = document.querySelector("#result");
   output.textContent = "불러오는 중…";
   try {
-    const url = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=${KEY}&Type=json`
+    const url = `https://open.neis.go.kr/hub/mealServiceDietInfo?Type=json`
       + `&ATPT_OFCDC_SC_CODE=${ATPT}&SD_SCHUL_CODE=${SCHUL}&MLSV_YMD=${today}`;
     const data = await (await fetch(url)).json();
     const rows = data.mealServiceDietInfo?.[1].row;
