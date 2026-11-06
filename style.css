@@ -18,3 +18,7 @@ main.weekly-mode>.hero,main.weekly-mode>.menu-panel,main.weekly-mode>.bottom-not
 @media(max-width:700px){.weekly-list{grid-template-columns:repeat(5,minmax(140px,1fr))}}
 
 #weekly-result>.week-day:nth-child(n+6){display:none}
+
+/* Final layout: five equal weekday columns fill the available panel */
+#weekly-result.weekly-list{width:100%;grid-template-columns:repeat(5,minmax(0,1fr));overflow-x:hidden}
+@media(max-width:700px){#weekly-result.weekly-list{grid-template-columns:repeat(5,minmax(0,1fr));overflow-x:auto}}
