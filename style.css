@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; color: #18324a; background: #f2f7fb; }
+header { padding: 2rem 1rem; text-align: center; color: white; background: #176b87; }
+main { width: min(92%, 760px); margin: 2rem auto; }
+section { margin: 1rem 0; padding: 1.25rem; border-radius: 14px; background: white; box-shadow: 0 3px 14px #18324a18; }
+button { padding: .7rem 1rem; border: 0; border-radius: 8px; color: white; background: #176b87; cursor: pointer; }
+footer { padding: 2rem; text-align: center; color: #526575; }
+```
