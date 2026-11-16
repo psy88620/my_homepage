@@ -34,3 +34,5 @@ main.weekly-mode>.hero,main.weekly-mode>.menu-panel,main.weekly-mode>.bottom-not
   .weekly-top h2{font-size:23px}
 }
 @media(min-width:621px){#weekly-result.weekly-list{grid-template-columns:repeat(5,minmax(0,1fr));overflow-x:hidden}}
+/* 모바일: 조식·중식·석식 카드를 가로 3열로 한눈에 */
+@media(max-width:620px){.widget .meal-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.widget .meal-card{padding:10px 8px}.widget .meal-card-head{flex-direction:column;align-items:flex-start;gap:2px}.widget .meal-card h3{font-size:14px}.widget .calories{font-size:9px}.widget .dish{margin-top:6px;font-size:11px;line-height:1.6;word-break:keep-all;overflow-wrap:anywhere}}
